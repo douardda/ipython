@@ -1,0 +1,5 @@
+version=3
+opts=filenamemangles=s/.+\/(\d\S*)\.tar\.gz/ipython-$1\.tar\.gz/,\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$// \
+  https://github.com/ipython/ipython/tags .*/(\d\S*)\.tar\.gz
+

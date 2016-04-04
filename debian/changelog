@@ -1,0 +1,5 @@
+ipython (4.1.2-1) unstable; urgency=medium
+
+  * New packaging for IPython 4.
+
+ -- David Douard <david.douard@logilab.fr>  Mon, 04 Apr 2016 17:20:55 +0200
