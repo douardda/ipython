@@ -1,0 +1,2 @@
+#!/usr/bin/dh-exec
+debian/ipython4.sh => /usr/bin/ipython4

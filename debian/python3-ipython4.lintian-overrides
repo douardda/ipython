@@ -1,0 +1,2 @@
+# necessary because of bug #804249
+python3-ipython4: python-module-in-wrong-location

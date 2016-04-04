@@ -1,51 +1,110 @@
-Source: ipython
-Section: python
-Priority: optional
+Source: ipython4
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Homepage: http://ipython.org
-Build-Depends:
-  debhelper (>= 9),
-  dh-python,
-  python-all (>=2.6.6-3),
-  python-setuptools (>= 18.5),
-  python-six (>= 1.3),
-  python-nose,
-  python-mock (>= 1.0.1),
-  python-zmq (>= 13.1),
-  python-tornado (< 4),
-  python-sphinx,
-  python-pygments,
-  python-mistune,
-  python-jsonschema,
-  python-jinja2,
-  python-requests,
-  python-testpath,
-  python-traitlets,
-  python-decorator,
-  python-pickleshare,
-  python-simplegeneric (>= 0.8),
+Uploaders: Julien Puydt <julien.puydt@laposte.net>
+Priority: optional
+Section: python
 Standards-Version: 3.9.6
+Homepage: https://github.com/ipython/ipython
+Build-Depends: debhelper (>= 9),
+               dh-exec,
+               dh-python,
+               python,
+               python-ipython-genutils,
+               python-matplotlib,
+               python-nose,
+               python-numpydoc,
+               python-pexpect,
+               python-pickleshare,
+               python-setuptools,
+               python-simplegeneric,
+               python-sphinx,
+               python-traitlets,
+               python3-all,
+               python3-ipython-genutils,
+               python3-nose,
+               python3-pexpect,
+               python3-setuptools
 X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.2
+Vcs-Git: git://anonscm.debian.org/python-modules/packages/ipython4.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/ipython4.git
 
-
-Package: ipython
+Package: python-ipython4
 Architecture: all
-Depends: 
-  python-decorator,
-  python-pexepect,
-  python-simplegeneric,
-  ${misc:Depends},
-  ${python:Depends},
-Suggests:
-  python-matplotlib,
-  python-numpy, 
-  python-zmq,
-Description: rich architecture for interactive computing
-  IPython is:  
-  - A powerful interactive shell.
-  - A kernel for Jupyter.
-  - Support for interactive data visualization and use of GUI toolkits.
-  - Flexible, embeddable interpreters to load into your own projects.
-  - Easy to use, high performance tools for parallel computing.
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Enhanced interactive Python shell (Python 2 version)
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the backend terminal shell for Python 2: for
+ the actual frontend install ipython.
 
+Package: python-ipython4-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Description: Enhanced interactive Python shell (documentation)
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the documentation.
 
+Package: python3-ipython4
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Enhanced interactive Python shell (Python 3 version)
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the backend terminal shell for Python 3: for
+ the actual frontend install ipython.
+
+Package: ipython4
+Architecture: all
+Section: interpreters
+Depends: python-ipython4 (= ${binary:Version}), ${misc:Depends}
+Description: Enhanced interactive Python 2 shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the actual terminal shell for Python 2.
+
+Package: ipython4-3
+Architecture: all
+Section: interpreters
+Depends: python3-ipython4 (= ${binary:Version}), ${misc:Depends}
+Description: Enhanced interactive Python 3 shell
+ IPython can be used as a replacement for the standard Python shell,
+ or it can be used as a complete working environment for scientific
+ computing (like Matlab or Mathematica) when paired with the standard
+ Python scientific and numerical tools. It supports dynamic object
+ introspections, numbered input/output prompts, a macro system,
+ session logging, session restoring, complete system shell access,
+ verbose and colored traceback reports, auto-parentheses, auto-quoting,
+ and is embeddable in other Python programs.
+ .
+ This package contains the actual terminal shell for Python 3.

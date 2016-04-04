@@ -1,5 +1,5 @@
-ipython (4.1.2-1) unstable; urgency=medium
+ipython4 (4.0.2-1) UNRELEASED; urgency=medium
 
-  * New packaging for IPython 4.
+  * New upstream version. (Closes: #780408)
 
- -- David Douard <david.douard@logilab.fr>  Mon, 04 Apr 2016 17:20:55 +0200
+ -- Julien Puydt <julien.puydt@laposte.net>  Sat, 16 Jan 2016 15:01:50 +0100
