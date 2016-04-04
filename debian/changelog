@@ -1,5 +1,9 @@
-ipython4 (4.0.2-1) UNRELEASED; urgency=medium
+ipython4 (4.1.2-1) UNRELEASED; urgency=medium
 
+  [ Julien Puydt ]
   * New upstream version. (Closes: #780408)
 
- -- Julien Puydt <julien.puydt@laposte.net>  Sat, 16 Jan 2016 15:01:50 +0100
+  [ David Douard ]
+  * Port to IPython 4.1.2.
+
+ -- David Douard <david.douard@logilab.fr>  Mon, 04 Apr 2016 18:09:31 +0200
