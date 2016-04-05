@@ -1,1 +1,2 @@
-extend-diff-ignore="^([^/]+\.egg-info/|tst/.*|CONTRIBUTING\.md|MANIFEST\.in)$"
+extend-diff-ignore=CONTRIBUTING.md
+extend-diff-ignore=MANIFEST.in
